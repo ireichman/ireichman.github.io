@@ -1,1 +1,3 @@
 .idea/
+*.log
+scratch.py
