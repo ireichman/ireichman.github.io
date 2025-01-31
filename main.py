@@ -89,12 +89,20 @@ def read_json(which_data) -> dict:
 
 @app.route(rule='/api/v1/texts', methods=['GET'])
 def get_texts():
+    """
+    Endpoint for sending texts to the frondend.
+    :return: JSON with text or error message.
+    """
 
     requested_text_key: str = request.args.get(key="text")
     app_logger.info(msg=f"Requested text: {requested_text_key}")
+    if not requested_text_key:
+        app_logger.error(msg=f"Error receiving parameters. Received URL: {request.url}")
+        return jsonify({"error": "Did not receive a key for text retrival."}), 400
     requested_text_value: str = texts[requested_text_key]
+    app_logger.info(msg=f"Returning value: {requested_text_value}")
 
-    return requested_text_value
+    return jsonify({"text": requested_text_value}), 200
 
 
 if __name__ == '__main__':
