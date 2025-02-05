@@ -2,9 +2,9 @@ interface ApiResponse {
     message: string;
 }
 
-async function updateContentFromApi(endpoint: string, elementId: string): Promise<void> {
+async function updateContentFromApi(endpoint: string, value: number, elementId: string): Promise<void> {
     try {
-        const response = await fetch(`/api/${endpoint}`);
+        const response = await fetch(`http://localhost:5000/api/v1/${endpoint}/${value}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -23,3 +23,11 @@ async function updateContentFromApi(endpoint: string, elementId: string): Promis
 }
 
 
+async function initializeContent(): Promise<void> {
+    await Promise.all([
+        updateContentFromApi('texts', 2, "button-home")
+    ]);
+}
+
+
+document.addEventListener('DOMContentLoaded', initializeContent)
