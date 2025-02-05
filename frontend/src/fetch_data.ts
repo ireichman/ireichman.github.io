@@ -1,8 +1,11 @@
 interface ApiResponse {
-    message: string;
+    // The key here is the same as in the JSON received from the API.
+    text: string;
+    image: string;
 }
 
-async function updateContentFromApi(endpoint: string, value: number, elementId: string): Promise<void> {
+// Asynchroous function for retrieving data from the API.
+async function updateContentFromApi(endpoint: string, value: number, dataType: keyof ApiResponse, elementId: string): Promise<void> {
     try {
         const response = await fetch(`http://localhost:5000/api/v1/${endpoint}/${value}`);
         if (!response.ok) {
@@ -10,10 +13,13 @@ async function updateContentFromApi(endpoint: string, value: number, elementId: 
         }
         
         const data: ApiResponse = await response.json();
+        console.log('Data received:', data)
+        console.log('Data message:', data[dataType])
         
         const element = document.getElementById(elementId);
+        console.log('Found element:', element)
         if (element) {
-            element.textContent = data.message;
+            element.textContent = data[dataType];
         } else {
             console.error(`Element with id '${elementId}' not found`);
         }
@@ -25,7 +31,7 @@ async function updateContentFromApi(endpoint: string, value: number, elementId: 
 
 async function initializeContent(): Promise<void> {
     await Promise.all([
-        updateContentFromApi('texts', 2, "button-home")
+        updateContentFromApi('texts', 2, "text", "home-button")
     ]);
 }
 
