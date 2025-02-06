@@ -99,6 +99,60 @@
     "name": "coming-soon-modal-3-title",
     "xpath": "/html/body/div[4]/div/div/div[2]/div/div/div/h2",
     "text":"My Next Project!"
+  },
+  {
+    "id": 18,
+    "name": "coming-soon-modal-3-p",
+    "xpath": "/html/body/div[4]/div/div/div[2]/div/div/div/p",
+    "text": "Coming soon"
+  },
+  {
+    "id": 19,
+    "name": "coming-soon-modal-3-close-button",
+    "xpath": "/html/body/div[4]/div/div/div[2]/div/div/div/button",
+    "text": "Close Window"
+  },
+  {
+    "id": 20,
+    "name": "about-title",
+    "xpath": "/html/body/section[2]/div/h2",
+    "text": "ABOUT"
+  },
+  {
+    "id": 21,
+    "name": "about-text-1",
+    "xpath": "/html/body/section[2]/div/div[2]/div[1]/p",
+    "text": "As a seasoned QA Automation Engineer, I bring a unique blend of technical prowess and interpersonal skills to the world of software quality assurance. With years of experience in IT, I've developed a comprehensive understanding of networks, systems, and the intricate ways technology serves business needs. My technical toolkit is anchored in Python, where I leverage automation to streamline testing processes and enhance software reliability. Beyond the code, I pride myself on my ability to communicate effectively, bridging the gap between technical complexities and business objectives. I'm not just about finding bugs—I'm about creating solutions that drive business success."
   }
+  {
+    "id": 22,
+    "name": "about-text-2",
+    "xpath": "/html/body/section[2]/div/div[2]/div[2]/p",
+    "text": "When I'm not optimizing test frameworks or collaborating with development teams, you'll find me pursuing my passions for adventure. Whether I'm scaling a rock face, mountain biking through challenging terrain, or exploring new countries, I bring the same sense of precision, curiosity, and enthusiasm to my personal life that I do to my professional work. I thrive on challenges, love continuous learning, and am always excited to tackle complex problems with creativity and technical expertise."
+  },
+  {
+    "id": 23,
+    "name": "contact-me-title",
+    "xpath": "/html/body/section[3]/div/h2",
+    "text": "CONTACT ME"
+  },
+  {
+    "id": 24,
+    "name": "contact-me-p",
+    "xpath": "//section[3]/div/div[2]//p",
+    "text": "I WOULD LOVE TO GET IN TOUCH! PLEASE CONTACT ME ON LINKEDIN VIA THE LINK BELOW."
+  },
+  {
+    "id": 25,
+    "name": "footer-title",
+    "xpath": "//footer//h4",
+    "text": "FIND ME ONLINE"
+  },
+  {
+    "id": 26,
+    "name": "copyrights",
+    "xpath": "//body/div[1]",
+    "text": "Copyright © Isreli Reichman 2025"
 
+  }
 ]
