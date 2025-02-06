@@ -35,6 +35,70 @@
     "text": "CONTACT"
   },
   {
-    
+    "id": 7,
+    "name": "home-h1",
+    "xpath": "//h1",
+    "text":"ISRELI REICHMAN"
+  },
+  {
+    "id": 8,
+    "name": "home-subtitle",
+    "xpath": "/html/body/header/div/h2",
+    "text": "Quality Assurance Engineer"
+  },
+  {
+    "id": 9,
+    "name": "portfolio-title",
+    "xpath": "/html/body/section/div/h2",
+    "text": "PORTFOLIO"
+  },
+  {
+    "id": 10,
+    "name": "email2pdf-title",
+    "xpath": "//section[1]/div/div[2]/div[1]/div/h4",
+    "text": "Email to PDF"
+  },
+  {
+    "id": 11,
+    "name": "email2pdf-modal-title",
+    "xpath": "/html/body/div[2]/div/div/div[2]/div/div/div/h2",
+    "text": "Email to PDF Converter"
   }
+  {
+    "id": 12,
+    "name": "email2pdf-modal-p",
+    "xpath": "/html/body/div[2]/div/div/div[2]/div/div/div/p",
+    "text": "Born of a need to convert email donation receipts to PDF for tax purposes. This nifty script can convert email files (.eml) to PDF. What makes it so useful is the ability to batch convert files and use a naming scheme for the output files. Click the GitHub icon to check it out!"
+  },
+  {
+    "id": 13,
+    "name": "email2pdf-modal-close-button",
+    "xpath": "/html/body/div[2]/div/div/div[2]/div/div/div/button",
+    "text": "Close Window"
+  },
+  {
+    "id": 14,
+    "name": "coming-soon-modal-2-title",
+    "xpath": "/html/body/div[3]/div/div/div[2]/div/div/div/h2",
+    "text": "My Next Project!"
+  },
+  {
+    "id": 15,
+    "name": "coming-soon-modal-2-p",
+    "xpath": "/html/body/div[3]/div/div/div[2]/div/div/div/p",
+    "text": "Coming soon"
+  },
+  {
+    "id": 16,
+    "name": "coming-soon-modal-2-close-button",
+    "xpath": "/html/body/div[3]/div/div/div[2]/div/div/div/button",
+    "text": "Close Window"
+  },
+  {
+    "id": 17,
+    "name": "coming-soon-modal-3-title",
+    "xpath": "/html/body/div[4]/div/div/div[2]/div/div/div/h2",
+    "text":"My Next Project!"
+  }
+
 ]
