@@ -1,5 +1,5 @@
 [{
-  "id": "1",
+  "id": 1,
   "name": "title",
   "xpath": "/html/head/title",
   "text": "Isreli Reichman"
@@ -9,6 +9,32 @@
     "name": "home-button",
     "xpath": "/html/body/nav/div/a",
     "text": "ISRELI REICHMAN"
-    }
-
+    },
+  {
+    "id": 3,
+    "name": "menu-button",
+    "xpath": "/html/body/nav/div/button",
+    "text": "MENU"
+  },
+  {
+    "id": 4,
+    "name": "portfolio-button",
+    "xpath": "/html/body/nav/div/div/ul/li[1]",
+    "text": "PORTFOLIO"
+  },
+  {
+    "id": 5,
+    "name": "about-button",
+    "xpath": "/html/body/nav/div/div/ul/li[2]",
+    "text": "ABOUT"
+  },
+  {
+    "id": 6,
+    "name": "contact-button",
+    "xpath": "/html/body/nav/div/div/ul/li[3]",
+    "text": "CONTACT"
+  },
+  {
+    
+  }
 ]
