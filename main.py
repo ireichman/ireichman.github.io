@@ -89,13 +89,13 @@ def get_texts(id):
         return jsonify({"error": "Did not receive a key for text retrival."}), 400
     # requested_text_value: str = texts[requested_text_key]
     requested_text_value: str = next((item["text"] for item in texts if item["id"] == id), None)
-    app_logger.info(msg=f"Returning value: {requested_text_value}")
+    app_logger.info(msg=f"Returning value: {requested_text_value} for id: {id}")
 
     return jsonify({"text": requested_text_value}), 200
 
 
 if __name__ == '__main__':
     texts: dict = read_json("texts")
-    requested_text_value: str = next((item["text"] for item in texts if item["id"] == 2), None)
+    requested_text_value: str = next((item["text"] for item in texts if item["id"] == 3), None)
     print("text: ", requested_text_value)
     app.run(debug=True)

@@ -63,7 +63,7 @@
     "name": "email2pdf-modal-title",
     "xpath": "/html/body/div[2]/div/div/div[2]/div/div/div/h2",
     "text": "Email to PDF Converter"
-  }
+  },
   {
     "id": 12,
     "name": "email2pdf-modal-p",
@@ -123,7 +123,7 @@
     "name": "about-text-1",
     "xpath": "/html/body/section[2]/div/div[2]/div[1]/p",
     "text": "As a seasoned QA Automation Engineer, I bring a unique blend of technical prowess and interpersonal skills to the world of software quality assurance. With years of experience in IT, I've developed a comprehensive understanding of networks, systems, and the intricate ways technology serves business needs. My technical toolkit is anchored in Python, where I leverage automation to streamline testing processes and enhance software reliability. Beyond the code, I pride myself on my ability to communicate effectively, bridging the gap between technical complexities and business objectives. I'm not just about finding bugs—I'm about creating solutions that drive business success."
-  }
+  },
   {
     "id": 22,
     "name": "about-text-2",
