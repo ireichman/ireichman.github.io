@@ -1,7 +1,7 @@
 import logging
 from logging.handlers import RotatingFileHandler
 import sys
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 import json
 from flask_cors import CORS
@@ -72,8 +72,10 @@ app = Flask(__name__)
 CORS(app)
 
 
-
-
+@app.route(rule="/")
+def index_html():
+    return render_template(template_name_or_list="index.html")
+                                                 
 
 @app.route(rule='/api/v1/texts/<int:id>', methods=['GET'])
 def get_texts(id):
