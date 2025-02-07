@@ -4,8 +4,6 @@ import sys
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 import json
-from flask_cors import CORS
-
 
 def setup_logger(name, log_file, level=logging.INFO):
 
