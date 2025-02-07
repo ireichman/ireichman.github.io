@@ -6,7 +6,13 @@ from flask_cors import CORS
 import json
 
 def setup_logger(name, log_file, level=logging.INFO):
-
+    """
+    Logging boilerplate.
+    :param name: Application's name.
+    :param log_file: Log file path and name.
+    :param level: Logging level. Defaults to INFO.
+    :return: Returns logger object.
+    """
     # Creating a custom logger.
     logger = logging.getLogger(name=name)
     logger.setLevel(level=level)
@@ -45,18 +51,17 @@ def setup_logger(name, log_file, level=logging.INFO):
 app_logger = setup_logger(name='app', log_file='app.log', level=logging.INFO)
 
 
-def main():
-    pass
-
-
 def read_json(which_data) -> dict:
     """
     Reading a JSON file.
     :param which_data: Could be 'texts' or 'images'.
-    :return:
+    :return: Dictionary of the JSON file.
     """
     if which_data == "texts":
         file = "./static/assets/texts/texts.json"
+    else:
+        app_logger.error(f"Could not find JSON file for {which_data}")
+        sys.exit(1)
     try:
         with open(file=file, mode='r') as json_file:
             data = json.load(json_file)
@@ -75,27 +80,24 @@ def index_html():
     return render_template(template_name_or_list="index.html")
                                                  
 
-@app.route(rule='/api/v1/texts/<int:id>', methods=['GET'])
-def get_texts(id):
+@app.route(rule='/api/v1/texts/<int:json_id>', methods=['GET'])
+def get_texts(json_id):
     """
     Endpoint for sending texts to the frondend.
     :return: JSON with text or error message.
     """
-    app_logger.info(f"Received id: {id}")
-    # requested_text_key: str = request.args.get(key="text")
-    # app_logger.info(msg=f"Requested text: {requested_text_key}")
-    if not id:
+    app_logger.info(f"Received id: {json_id}")
+
+    if not json_id:
         app_logger.error(msg=f"Error receiving parameters. Received URL: {request.url}")
         return jsonify({"error": "Did not receive a key for text retrival."}), 400
-    # requested_text_value: str = texts[requested_text_key]
-    requested_text_value: str = next((item["text"] for item in texts if item["id"] == id), None)
-    app_logger.info(msg=f"Returning value: {requested_text_value} for id: {id}")
+
+    requested_text_value: str = next((item["text"] for item in texts if item["id"] == json_id), None)
+    app_logger.info(msg=f"Returning value: {requested_text_value} for id: {json_id}")
 
     return jsonify({"text": requested_text_value}), 200
 
 
 if __name__ == '__main__':
     texts: dict = read_json("texts")
-    requested_text_value: str = next((item["text"] for item in texts if item["id"] == 3), None)
-    print("text: ", requested_text_value)
     app.run(debug=True)
