@@ -72,7 +72,10 @@ def read_json(which_data) -> dict:
 
 ############## Flask Application ######################
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/v1/*": {"origins": [
+    "https://ireichman-github-io.onrender.com",
+    "http://0.0.0.0:8000"
+]}})
 
 
 @app.route(rule="/")
