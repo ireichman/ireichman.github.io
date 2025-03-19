@@ -7,7 +7,7 @@ interface ApiResponse {
 // Asynchronous function for retrieving data from the API.
 async function updateContentFromApi({ endpoint, value, dataType, elementId }: {endpoint: string, value: number, dataType: keyof ApiResponse, elementId: string}): Promise<void> {
     try {
-        const response = await fetch(`http://0.0.0.0:8000/api/v1/${endpoint}/${value}`);
+        const response = await fetch(`/api/v1/${endpoint}/${value}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
