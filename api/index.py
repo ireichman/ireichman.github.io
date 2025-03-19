@@ -5,7 +5,7 @@ from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 import json
 
-def setup_logger(name, log_file, level=logging.INFO):
+def setup_logger(name, log_file: str=None, level=logging.INFO):
     """
     Logging boilerplate.
     :param name: Application's name.
@@ -17,38 +17,38 @@ def setup_logger(name, log_file, level=logging.INFO):
     logger = logging.getLogger(name=name)
     logger.setLevel(level=level)
 
-    # Create formatters
-    # Detailed format for file logging
-    file_formatter = logging.Formatter(
-        fmt='%(asctime)s - %(name)s:%(funcName)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S')
+    if log_file:
+        # Detailed format for file logging
+        file_formatter = logging.Formatter(
+            fmt='%(asctime)s - %(name)s:%(funcName)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s',
+            datefmt='%Y-%m-%d %H:%M:%S')
+        # File Handler with log rotation
+        file_handler = RotatingFileHandler(
+            log_file,
+            maxBytes=10*1024*1024,  # 10MB
+            backupCount=5
+        )
+        file_handler.setLevel(level)
+        file_handler.setFormatter(file_formatter)
+        # Add log file handler to logger.
+        logger.addHandler(file_handler)
 
     # Simpler format for console
     console_formatter = logging.Formatter(fmt=
         '%(name)s:%(funcName)s - %(levelname)s - %(message)s')
-
-    # File Handler with log rotation
-    # file_handler = RotatingFileHandler(
-    #     log_file,
-    #     maxBytes=10*1024*1024,  # 10MB
-    #     backupCount=5
-    # )
-    # file_handler.setLevel(level)
-    # file_handler.setFormatter(file_formatter)
 
     # Console Handler
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(level)
     console_handler.setFormatter(console_formatter)
 
-    # Add handlers to the logger
-    # logger.addHandler(file_handler)
+    # Add console handler to the logger
     logger.addHandler(console_handler)
 
     return logger
 
 # Create loggers for different components
-app_logger = setup_logger(name='app', log_file='app.log', level=logging.INFO)
+app_logger = setup_logger(name='app', level=logging.INFO)
 
 
 def read_json(which_data) -> dict:
