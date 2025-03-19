@@ -90,7 +90,7 @@ def get_texts(json_id):
     :return: JSON with text or error message.
     """
     app_logger.info(f"Received id: {json_id}")
-    texts: dict = read_json("texts")
+
     if not json_id:
         app_logger.error(msg=f"Error receiving parameters. Received URL: {request.url}")
         return jsonify({"error": "Did not receive a key for text retrival."}), 400
@@ -100,7 +100,7 @@ def get_texts(json_id):
 
     return jsonify({"text": requested_text_value}), 200
 
-
+texts: dict = read_json("texts")
 # if __name__ == '__main__':
 # Read texts.json.
 # app.run(host="0.0.0.0", port=8000, debug=True)
