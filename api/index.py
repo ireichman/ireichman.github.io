@@ -28,13 +28,13 @@ def setup_logger(name, log_file, level=logging.INFO):
         '%(name)s:%(funcName)s - %(levelname)s - %(message)s')
 
     # File Handler with log rotation
-    file_handler = RotatingFileHandler(
-        log_file,
-        maxBytes=10*1024*1024,  # 10MB
-        backupCount=5
-    )
-    file_handler.setLevel(level)
-    file_handler.setFormatter(file_formatter)
+    # file_handler = RotatingFileHandler(
+    #     log_file,
+    #     maxBytes=10*1024*1024,  # 10MB
+    #     backupCount=5
+    # )
+    # file_handler.setLevel(level)
+    # file_handler.setFormatter(file_formatter)
 
     # Console Handler
     console_handler = logging.StreamHandler(sys.stdout)
@@ -42,7 +42,7 @@ def setup_logger(name, log_file, level=logging.INFO):
     console_handler.setFormatter(console_formatter)
 
     # Add handlers to the logger
-    logger.addHandler(file_handler)
+    # logger.addHandler(file_handler)
     logger.addHandler(console_handler)
 
     return logger
