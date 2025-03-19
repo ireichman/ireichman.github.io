@@ -58,7 +58,7 @@ def read_json(which_data) -> dict:
     :return: Dictionary of the JSON file.
     """
     if which_data == "texts":
-        file = "./static/assets/texts/texts.json"
+        file = "./api/static/assets/texts/texts.json"
     else:
         app_logger.error(f"Could not find JSON file for {which_data}")
         sys.exit(1)
