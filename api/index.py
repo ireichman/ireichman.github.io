@@ -58,7 +58,7 @@ def read_json(which_data) -> dict:
     :return: Dictionary of the JSON file.
     """
     if which_data == "texts":
-        file = "./static/assets/texts/texts.json"
+        file = "../static/assets/texts/texts.json"
     else:
         app_logger.error(f"Could not find JSON file for {which_data}")
         sys.exit(1)
@@ -73,8 +73,8 @@ def read_json(which_data) -> dict:
 ############## Flask Application ######################
 app = Flask(__name__)
 CORS(app, resources={r"/api/v1/*": {"origins": [
-    "https://ireichman-github-io.onrender.com",
-    "http://0.0.0.0:8000"
+
+    "*"
 ]}})
 
 
