@@ -1,6 +1,12 @@
 .idea/
+<<<<<<< HEAD
 *.log
 scratch.py
 node_modules/
 __pycache__/
 secrets.env
+=======
+app.log
+node_modules/
+scratch.py
+>>>>>>> main
