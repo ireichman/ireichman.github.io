@@ -1,0 +1,25 @@
+{
+  "name": "ireichman.github.io",
+  "version": "1.0.0",
+  "description": "This is an initial release.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ireichman/ireichman.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ireichman/ireichman.github.io/issues"
+  },
+  "homepage": "https://github.com/ireichman/ireichman.github.io#readme",
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
