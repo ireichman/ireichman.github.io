@@ -28,13 +28,13 @@ def setup_logger(name, log_file, level=logging.INFO):
         '%(name)s:%(funcName)s - %(levelname)s - %(message)s')
 
     # File Handler with log rotation
-    file_handler = RotatingFileHandler(
-        log_file,
-        maxBytes=10*1024*1024,  # 10MB
-        backupCount=5
-    )
-    file_handler.setLevel(level)
-    file_handler.setFormatter(file_formatter)
+    # file_handler = RotatingFileHandler(
+    #     log_file,
+    #     maxBytes=10*1024*1024,  # 10MB
+    #     backupCount=5
+    # )
+    # file_handler.setLevel(level)
+    # file_handler.setFormatter(file_formatter)
 
     # Console Handler
     console_handler = logging.StreamHandler(sys.stdout)
@@ -42,7 +42,7 @@ def setup_logger(name, log_file, level=logging.INFO):
     console_handler.setFormatter(console_formatter)
 
     # Add handlers to the logger
-    logger.addHandler(file_handler)
+    # logger.addHandler(file_handler)
     logger.addHandler(console_handler)
 
     return logger
@@ -58,7 +58,7 @@ def read_json(which_data) -> dict:
     :return: Dictionary of the JSON file.
     """
     if which_data == "texts":
-        file = "./static/assets/texts/texts.json"
+        file = "./api/static/assets/texts/texts.json"
     else:
         app_logger.error(f"Could not find JSON file for {which_data}")
         sys.exit(1)
@@ -73,8 +73,8 @@ def read_json(which_data) -> dict:
 ############## Flask Application ######################
 app = Flask(__name__)
 CORS(app, resources={r"/api/v1/*": {"origins": [
-    "https://ireichman-github-io.onrender.com",
-    "http://0.0.0.0:8000"
+
+    "*"
 ]}})
 
 
@@ -100,8 +100,9 @@ def get_texts(json_id):
 
     return jsonify({"text": requested_text_value}), 200
 
-
+#
 # if __name__ == '__main__':
-# Read texts.json.
+#     app.run(host="0.0.0.0", port=8000, debug=True)
 texts: dict = read_json("texts")
-# app.run(host="0.0.0.0", port=8000, debug=True)
+
+# Read texts.json.
