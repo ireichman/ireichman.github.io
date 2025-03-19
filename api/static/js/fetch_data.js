@@ -12,7 +12,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 function updateContentFromApi(_a) {
     return __awaiter(this, arguments, void 0, function* ({ endpoint, value, dataType, elementId }) {
         try {
-            const response = yield fetch(`http://0.0.0.0:8000/api/v1/${endpoint}/${value}`);
+            const response = yield fetch(`/api/v1/${endpoint}/${value}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }

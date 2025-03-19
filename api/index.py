@@ -100,7 +100,9 @@ def get_texts(json_id):
 
     return jsonify({"text": requested_text_value}), 200
 
-texts: dict = read_json("texts")
+#
 # if __name__ == '__main__':
+#     app.run(host="0.0.0.0", port=8000, debug=True)
+texts: dict = read_json("texts")
+
 # Read texts.json.
-# app.run(host="0.0.0.0", port=8000, debug=True)
