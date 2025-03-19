@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// Asynchroous function for retrieving data from the API.
+// Asynchronous function for retrieving data from the API.
 function updateContentFromApi(_a) {
     return __awaiter(this, arguments, void 0, function* ({ endpoint, value, dataType, elementId }) {
         try {
@@ -39,7 +39,6 @@ function updateContentFromApi(_a) {
 }
 // initializeContent calls the updateContentFromApi for each element ID that needs data.
 function initializeContent() {
-    // return;
     return __awaiter(this, void 0, void 0, function* () {
         yield Promise.all([
             updateContentFromApi({ endpoint: 'texts', value: 2, dataType: "text", elementId: "home-button" }),
