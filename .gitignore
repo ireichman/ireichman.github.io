@@ -3,3 +3,4 @@
 scratch.py
 node_modules/
 __pycache__/
+secrets.env
