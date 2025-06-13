@@ -10,7 +10,9 @@ It now has:
 * Texts hosted in a JSON file. Will be moved to a DB.
 * The site is hosted on [Vercel](https://www.vercel.com)
 * A TypeScript function for fetching data from backend.
+* Protected main and dev branches. Changes need to be done through a PR.
 
 ### The future.
 * SQL database for hosting assets.
 * A fake store for QA demo purposes.
+* Add unit tests for updateContentFromApi()
