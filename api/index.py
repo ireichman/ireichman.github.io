@@ -58,7 +58,7 @@ def read_json(which_data) -> dict:
     :return: Dictionary of the JSON file.
     """
     if which_data == "texts":
-        file = "./api/static/assets/texts/texts.json"
+        file = "../api/static/assets/texts/texts.json"
     else:
         app_logger.error(f"Could not find JSON file for {which_data}")
         sys.exit(1)
@@ -88,7 +88,7 @@ def get_texts(json_id):
     """
     Endpoint for sending texts to the frondend.
     :return: JSON with text or error message.
-    """
+    """ 
     app_logger.info(f"Received id: {json_id}")
 
     if not json_id:
@@ -100,9 +100,10 @@ def get_texts(json_id):
 
     return jsonify({"text": requested_text_value}), 200
 
-#
-# if __name__ == '__main__':
-#     app.run(host="0.0.0.0", port=8000, debug=True)
-texts: dict = read_json("texts")
+
+if __name__ == '__main__':
+    texts: dict = read_json("texts")
+
+    app.run(host="0.0.0.0", port=8000, debug=True)
 
 # Read texts.json.

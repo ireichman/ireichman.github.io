@@ -16,3 +16,5 @@ It now has:
 * SQL database for hosting assets.
 * A fake store for QA demo purposes.
 * Add unit tests for updateContentFromApi()
+
+
