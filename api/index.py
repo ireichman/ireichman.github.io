@@ -88,7 +88,7 @@ def get_texts(json_id):
     """
     Endpoint for sending texts to the frondend.
     :return: JSON with text or error message.
-    """ 
+    """
     app_logger.info(f"Received id: {json_id}")
 
     if not json_id:
