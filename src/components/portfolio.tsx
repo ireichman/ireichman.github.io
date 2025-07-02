@@ -133,7 +133,7 @@ export default function Portfolio() {
                       <div>
                         <a
                           className="btn btn-outline-dark btn-social mx-1"
-                          href="https:{ /*github.com/ireichman/email_to_pdf"
+                          href="https://github.com/ireichman/email_to_pdf"
                         >
                           <i className="fab fa-fw fa-github"></i>
                         </a>
