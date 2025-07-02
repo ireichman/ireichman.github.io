@@ -93,9 +93,9 @@ export default function Home() {
     </div>
 
     { /* Bootstrap core JS */}
-    <Script src="https:{ /*cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" />
+    <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" />
     { /* Core theme JS */}
-    <Script src="../static/js/scripts.js"/>
+    <Script src="/JS/scripts.js"/>
     </>
   );
 }
