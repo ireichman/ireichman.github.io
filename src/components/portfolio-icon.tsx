@@ -21,7 +21,7 @@ export default function PortfolioIcon(props: Props) {
               <i className="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <h4 id="email2pdf-title" className="text-center">
+          <h4 id="portfolio-title" className="text-center">
             {props.title}
           </h4>
           <img className="img-fluid" src={props.image} alt="..." />
@@ -51,7 +51,7 @@ export default function PortfolioIcon(props: Props) {
                   <div className="col-lg-8">
                     {/* Portfolio Modal - Title */}
                     <h2
-                      id="email2pdf-modal-title"
+                      id="portfolio-modal-title"
                       className="portfolio-modal-title text-secondary text-uppercase mb-0"
                     >
                       {props.title}
@@ -66,12 +66,12 @@ export default function PortfolioIcon(props: Props) {
                     </div>
                     {/* Portfolio Modal - Image */}
                     <img
-                      className="img-fluid-portfolio-modal rounded mb-5"
+                      className="img-fluid-portfolio-modal rounded mb-5 portfolio-image"
                       src={props.image}
                       alt={props.title}
                     />
                     {/* Portfolio Modal - Text */}
-                    <p id="email2pdf-modal-p" className="mb-4">
+                    <p id="portfolio-modal-p" className="mb-4">
                       {props.description}
                     </p>
                     <div>
@@ -83,7 +83,7 @@ export default function PortfolioIcon(props: Props) {
                       </a>
                     </div>
                     <button
-                      id="email2pdf-modal-close-button"
+                      id="portfolio-modal-close-button"
                       className="btn btn-primary"
                       data-bs-dismiss="modal"
                     >
