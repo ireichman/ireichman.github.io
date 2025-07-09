@@ -8,15 +8,15 @@ const portfolioItems = [
     link: "https://github.com/ireichman/email_to_pdf",
   },
   {
-    title: "B",
+    title: "Coming soon",
     image: "img/portfolio/coming-soon.png",
-    description: "B",
+    description: "Coming soon",
     link: "#B",
   },
   {
-    title: "C",
+    title: "Coming soon",
     image: "img/portfolio/coming-soon.png",
-    description: "C",
+    description: "Coming soon",
     link: "#C",
   },
 ];
