@@ -3,6 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./styles.css"
 import Script from "next/script";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import Copyright from "@/components/copyright";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,8 +36,10 @@ export default function RootLayout({
           src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
           crossOrigin="anonymous"
         />
-
+        <Navbar />
         {children}
+        <Footer />
+        <Copyright />
       </body>
     </html>
   );
