@@ -13,7 +13,7 @@ export const portfolio = [
     title: "This website!",
     image: "img/portfolio/coming-soon.png",
     description:
-      "Ever the work in progress. This website is now running on Next.JS and React. Some components still use Bootstrap but that will change to pure React soon.",
+      "Ever the work in progress. This website is now mostly running on Next.JS and React. Some components still use Bootstrap but that will change to pure React soon.",
     link: "https://github.com/ireichman/ireichman.github.io/",
   },
   {
