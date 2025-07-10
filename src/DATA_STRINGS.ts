@@ -1,7 +1,3 @@
-export const DATA = {
-    name: "Isreli justin"
-}
-
 export const portfolio = [
   {
     title: "Email to PDF",
@@ -10,16 +6,17 @@ export const portfolio = [
     link: "https://github.com/ireichman/email_to_pdf",
   },
   {
-    title: "This website!",
-    image: "img/portfolio/coming-soon.png",
+    title: "This Website!",
+    image: "img/portfolio/react.png",
     description:
-      "Ever the work in progress. This website is now mostly running on Next.JS and React. Some components still use Bootstrap but that will change to pure React soon.",
+      "Ever the work in progress. This website is now mostly running on Next.JS and React. Some components still use Bootstrap but that will change to pure React soon. It is written in TypeScript which has been great to learn and work with.",
     link: "https://github.com/ireichman/ireichman.github.io/",
   },
   {
     title: "Playwright Framework for Sauce Demo",
-    image: "img/portfolio/coming-soon.png",
-    description: "Originally made for a job application. I continued to develop it just for fun though.",
+    image: "img/portfolio/playwright.png",
+    description:
+      `Originally made for a job application. I continued to develop it just for fun though. Using TypeScript and Playwright, I created a framework for testing {<a src="https://www.saucedemo.com" />}`,
     link: "https://github.com/ireichman/sauce-demo-testing",
   },
 ];
