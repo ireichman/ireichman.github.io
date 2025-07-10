@@ -1,4 +1,5 @@
 import PortfolioIcon from "./portfolio-icon";
+import { portfolio } from "../DATA_STRINGS"
 
 const portfolioItems = [
   {
@@ -39,7 +40,7 @@ export default function Portfolio() {
             </div>
             {/* Portfolio Grid Items */}
             <div className="row justify-content-center">
-              { portfolioItems.map(
+              { portfolio.map(
                 (item, index) => (
                     <PortfolioIcon
                         id={`portfolioModal${index}`}
