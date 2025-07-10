@@ -1,28 +1,6 @@
 import PortfolioIcon from "./portfolio-icon";
 import { portfolio } from "../DATA_STRINGS"
 
-const portfolioItems = [
-  {
-    title: "Email to PDF",
-    image: "img/portfolio/email_pdf.png",
-    description: `Born of a need to convert email donation receipts to PDF for tax purposes. This nifty script can convert email files (.eml) to PDF. What makes it so useful is the ability to batch convert files and use a naming scheme for the output files. Click the GitHub icon to check it out!`,
-    link: "https://github.com/ireichman/email_to_pdf",
-  },
-  {
-    title: "Coming soon",
-    image: "img/portfolio/coming-soon.png",
-    description: "Coming soon",
-    link: "#B",
-  },
-  {
-    title: "Coming soon",
-    image: "img/portfolio/coming-soon.png",
-    description: "Coming soon",
-    link: "#C",
-  },
-];
-
-
 export default function Portfolio() {
     return (
       <>
