@@ -22,7 +22,7 @@ export default function Footer() {
               >
                 <i className="fab fa-fw fa-linkedin-in"></i>
               </a>
-              <a className="btn btn-outline-light btn-social mx-1" href="#!">
+              <a className="btn btn-outline-light btn-social mx-1" href="#">
                 <i className="fab fa-fw fa-dribbble"></i>
               </a>
             </div>
