@@ -1,3 +1,4 @@
+
 export const portfolio = [
   {
     title: "Email to PDF",
@@ -15,8 +16,8 @@ export const portfolio = [
   {
     title: "Playwright Framework for Sauce Demo",
     image: "img/portfolio/playwright.png",
-    description:
-      `Originally made for a job application. I continued to develop it just for fun though. Using TypeScript and Playwright, I created a framework for testing {<a src="https://www.saucedemo.com" />}`,
+    description: `Originally made for a job application. I continued to develop it just for fun though. Using TypeScript and Playwright, I created a framework for testing 
+      saucedemo.com`,
     link: "https://github.com/ireichman/sauce-demo-testing",
   },
 ];
