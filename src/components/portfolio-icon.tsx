@@ -1,4 +1,4 @@
-// import Image from "next/image"
+import Image from "next/image";
 
 interface Props {
   title: string;
@@ -8,7 +8,7 @@ interface Props {
   id: string;
 }
 
-export default function PortfolioIcon(props: Props) {  
+export default function PortfolioIcon(props: Props) {
   return (
     <>
       {/* Define spacing for modal icon in home page */}
@@ -26,7 +26,14 @@ export default function PortfolioIcon(props: Props) {
           <h4 id="portfolio-title" className="text-center">
             {props.title}
           </h4>
-          <img className="img-fluid" src={props.image} alt="..." />
+          <Image //so it doesn't yell at you for wrong formatting :3
+            className="img-fluid"
+            src={props.image}
+            alt={props.title}
+            width={400}   
+            height={300}  // or any dimensions really :3
+            priority={false}
+          />
         </div>
       </div>
 
@@ -67,19 +74,26 @@ export default function PortfolioIcon(props: Props) {
                       <div className="divider-custom-line"></div>
                     </div>
                     {/* Portfolio Modal - Image */}
-                    <img
+                    <Image
                       className="img-fluid-portfolio-modal rounded mb-5 portfolio-image"
                       src={props.image}
                       alt={props.title}
+                      width={800}  
+                      height={600} 
+                      priority={false}
                     />
                     {/* Portfolio Modal - Text */}
-                    <p id="portfolio-modal-p" className="mb-4">
-                      {props.description}
-                    </p>
+                    <p
+                      id="portfolio-modal-p"
+                      className="mb-4"
+                      dangerouslySetInnerHTML={{ __html: props.description }} //forces next to render sausedemo as link inside instead of putting it in like a plain text 
+                    ></p>
                     <div>
                       <a
                         className="btn btn-outline-dark btn-social mx-1"
                         href={props.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <i className="fab fa-fw fa-github"></i>
                       </a>
